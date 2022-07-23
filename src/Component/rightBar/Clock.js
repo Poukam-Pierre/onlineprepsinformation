@@ -4,7 +4,7 @@ import { Fragment } from 'react'
 import './Clock.css'
 import { Paper } from '@mui/material'
 
-function Clock({ timerDays, timerHours, timerMinutes, timerSeconds }) {
+function Clock({ timerDays, timerHours, timerMinutes, timerSeconds, t }) {
   return (
     <Box className="container" component={Paper}>
       <Fragment>
@@ -13,22 +13,22 @@ function Clock({ timerDays, timerHours, timerMinutes, timerSeconds }) {
             <div className="clock">
               <section>
                 <p>{timerDays}</p>
-                <small>Jours</small>
+                <small>{t('days')}</small>
               </section>
               <span>:</span>
               <section>
                 <p>{timerHours}</p>
-                <small>Heures</small>
+                <small>{t('hours')}</small>
               </section>
               <span>:</span>
               <section>
                 <p>{timerMinutes}</p>
-                <small>Minutes</small>
+                <small>{t('minutes')}</small>
               </section>
               <span>:</span>
               <section>
                 <p>{timerSeconds}</p>
-                <small>Secondes</small>
+                <small>{t('seconds')}</small>
               </section>
             </div>
           </section>

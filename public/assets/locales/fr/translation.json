@@ -1,0 +1,21 @@
+{
+    "welcome_to_onlinepreps": "Bienvenue dans l'environnement descriptif du projet",
+    "death_time": "TEMPS DE MIS EN OEUVRE",
+    "days": "Jours",
+    "hours": "Heures",
+    "minutes":"Minutes",
+    "seconds":"Secondes",
+    "name":"Nom",
+    "email":"Email",
+    "btn_submit":"Me signaler",
+    "phone_number":"Numéro de téléphone",
+    "tagline":"Une solution qui nous fait gagner du temps",
+    "copyright":"Tout droit reservé",
+    "brand": "Online Preps",
+    "goals":{
+      "title": "Objectifs",
+      "visible_part":"Online Preps est une école en ligne d'évaluation de capacités des apprenants ou désireux d'avoir un permis de conduire. Quelle que soit la catégorie de permis, Online Preps propose des épreuves nationaux antérieur pour vous aider à vous évaluer.",
+      "hidden_part":"La mission d'OnlinePreps est d'offrir aux camerounais et aux gabonais dans un premier temps, une plateforme d'épreuves nationales du permis de conduire. Il sera question de retrouver sur OnlinePreps tous les examens officiels déjà passés du permis de conduire dans toutes les catégories. L'apprenant camerounais ou gabonais se retrouvant sur cette plateforme pourra s'exercer dans les conditions d'examen en vue de se préparer pour l'examen national. A la fin de chaque composition, une correction automatique sera effectuée avec d'amples explications sur les différentes questions de l'épreuves."
+  }
+
+  }

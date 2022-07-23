@@ -1,0 +1,21 @@
+
+{
+    "welcome_to_onlinepreps": "Welcome to the descriptive environment of the project",
+    "death_time": "IMPLEMENTATION TIME",
+    "days": "Days",
+    "hours": "Hours", 
+    "minutes":"Minutes",
+    "seconds":"Seconds",
+    "name":"Name",
+    "email":"Email",
+    "btn_submit":"Report to me",
+    "phone_number":"Phone number",
+    "tagline":"A time saving solution",
+    "copyright":"All right reserved",
+    "brand": "Online Preps",
+    "goals":{
+        "title": "Objectives",
+        "visible_part":"Online Preps is an online skills assessment school for learners who wish to obtain a driving licence. Whatever the licence category, Online Preps offers national past tests to help you assess yourself.",
+        "hidden_part":"The mission of OnlinePreps is to provide Cameroonians and Gabonese with a platform for national driving tests. On OnlinePreps, you will find all the official driving licence tests that have already been passed in all categories. The Cameroonian or Gabonese learner will be able to practice under test conditions in order to prepare for the national exam. At the end of each composition, an automatic correction will be made with ample explanations on the different questions of the test"
+    }
+}

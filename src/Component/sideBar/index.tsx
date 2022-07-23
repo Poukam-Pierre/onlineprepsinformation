@@ -3,8 +3,10 @@
 import { Box, Button, Typography, Collapse } from '@mui/material'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 function SideInfos() {
+  const { t } = useTranslation()
   const [objectifChecked, setobjectifChecked] = useState<boolean>(false)
   const [userChecked, setUserChecked] = useState<boolean>(false)
   const [functionChecked, setFunctionChecked] = useState<boolean>(false)
@@ -48,31 +50,15 @@ function SideInfos() {
           onClick={handleChangeObj}
         >
           <Button>
-            <Typography>Objectifs</Typography>
+            <Typography>{t('goals.title')}</Typography>
           </Button>
           <ArrowDropDownIcon sx={{ fontSize: '1.8rem' }} />
         </Box>
-        <Typography textAlign="justify">
-          <strong>Online Preps</strong> est une école en ligne d'évaluation de
-          capacités des apprenants ou désireux d'avoir un permis de
-          conduire.Quelle que soit la catégorie de permis,{' '}
-          <strong>Online Preps</strong> propose des épreuves nationaux antérieux
-          pour vous aider à vous évaluer.
-        </Typography>
+        <Typography textAlign="justify">{t('goals.visible_part')}</Typography>
         <Collapse in={objectifChecked}>
           <Box>
             <Typography textAlign="justify">
-              La mission <strong>d'OnlinePreps</strong> est d'offrir aux
-              camerounais et aux gabonais dans un premier temps, une plateforme
-              d'épreuves nationales du permis de conduire. Il sera question de
-              retrouver sur <strong>OnlinePreps</strong> tous les examens
-              officiels déjà passés du permis de conduire dans toutes les
-              catégories. L'apprenant camerounais ou gabonais se retrouvant sur
-              cette plateforme pourra s'exercer dans les conditions d'examen en
-              vue de se préparer pour l'examen national où d'avantage d'aiguiser
-              ses capacités. A la fin de chaque composition, une correction
-              automatique sera effectuée avec d'amples explications sur les
-              différentes questions de l'épreuves.
+              {t('goals.hidden_part')}
             </Typography>
           </Box>
         </Collapse>

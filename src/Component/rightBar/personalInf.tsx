@@ -12,6 +12,8 @@ import PhoneInput from 'react-phone-number-input'
 import { useFormik } from 'formik'
 import { RegistrationForm } from './ShemaYup'
 import 'react-phone-number-input/style.css'
+import { useTranslation } from 'react-i18next'
+// import { con } from '../connexion'
 
 interface PersolInf {
   nom: string
@@ -54,11 +56,23 @@ function FormInf() {
         phoneNumber: '',
       },
       onSubmit: (values, { resetForm }) => {
-        console.log(values)
+        // con.connect(function (err: any) {
+        //   if (err) throw err
+        //   alert('Echec de sauvegarde de données personnelles')
+        //   var sql =
+        //     'INSERT INTO internautes(user_name, email, phone_number) VALUES(`{values.name}`, `{values.email}`, `{values.phone}`)'
+        //   con.query(sql, function (err: any, result: any) {
+        //     if (err) throw err
+        //     alert('Données sauvégardées avec succès')
+        //   })
+        // })
+        // console.log(values)
         resetForm()
       },
       validationSchema: RegistrationForm,
     })
+
+  const { t } = useTranslation()
   return (
     <Box
       component="form"
@@ -67,7 +81,7 @@ function FormInf() {
     >
       <Styledtextfield
         id="outlined-basic"
-        label="nom"
+        label={t('name')}
         type="text"
         name="nom"
         onChange={handleChange}
@@ -80,7 +94,7 @@ function FormInf() {
       />
       <Styledtextfield
         id="outlined-basic2"
-        label="email"
+        label={t('email')}
         type="text"
         name="email"
         value={values.email}
@@ -94,7 +108,7 @@ function FormInf() {
       <StylePhoneNumber
         value={values.phoneNumber}
         onChange={(number) => setFieldValue(`phoneNumber`, number?.toString())}
-        placeholder="Numéro de téléphone"
+        placeholder={t('phone_number')}
       />
       {errors.phoneNumber && touched.phoneNumber ? (
         <FormHelperText error>{errors.phoneNumber}</FormHelperText>
@@ -104,12 +118,14 @@ function FormInf() {
       <Box display="flex" justifyContent="center" p={2}>
         <Fab variant="extended" aria-label="add" type="submit">
           <Typography variant="button" paddingLeft="5px">
-            me signaler
+            {t('btn_submit')}
           </Typography>
         </Fab>
       </Box>
     </Box>
   )
 }
+
+// var sql ="INSERT INTO internautes(user_name, email, phone_number) VALUES(`{values.name}`, `{values.email}`, `{values.phone}`)"
 
 export default FormInf

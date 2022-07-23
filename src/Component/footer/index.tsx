@@ -5,8 +5,11 @@ import AboutUs from './aboutUs'
 import { Box } from '@mui/system'
 import { Typography } from '@mui/material'
 import { theme } from '../../utils/style/theme'
+import { useTranslation } from 'react-i18next'
 
 function Footer() {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -22,9 +25,7 @@ function Footer() {
         textAlign="center"
         sx={{ marginBottom: '20px' }}
       >
-        <Typography variant="h4">
-          Une solution qui nous fait gagner du temps
-        </Typography>
+        <Typography variant="h4">{t('tagline')}</Typography>
       </Box>
       <Box
         sx={{
@@ -40,8 +41,8 @@ function Footer() {
       </Box>
       <Box display="flex" justifyContent="center" textAlign="center">
         <Typography variant="h6">
-          Copyright {`OnlinePreps@${new Date().getFullYear()}`}. Tout droit
-          reservé
+          Copyright {`OnlinePreps@${new Date().getFullYear()}`}.{' '}
+          {t('copyright')}
         </Typography>
       </Box>
     </Box>

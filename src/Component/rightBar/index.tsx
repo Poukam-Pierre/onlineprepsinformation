@@ -6,12 +6,15 @@ import { useState, useEffect } from 'react'
 import './Clock.css'
 import { Typography } from '@mui/material'
 import FormInf from './personalInf'
+import { useTranslation } from 'react-i18next'
 
 function RightBarInfos() {
   const [timerDays, setTimerDay] = useState<number>()
   const [timerHours, setTimerHours] = useState<number>()
   const [timerMinutes, setTimerMinutes] = useState<number>()
   const [timerSeconds, setTimerSecond] = useState<number>()
+
+  const { t } = useTranslation()
 
   let interval: any
 
@@ -56,13 +59,14 @@ function RightBarInfos() {
     >
       <Box>
         <Typography sx={{ padding: '30px', fontWeight: 'bold' }} variant="h5">
-          TEMPS DE MIS EN OEUVRE
+          {t('death_time')}
         </Typography>
         <Clock
           timerDays={timerDays}
           timerHours={timerHours}
           timerMinutes={timerMinutes}
           timerSeconds={timerSeconds}
+          t={t}
         />
       </Box>
       <Box>
