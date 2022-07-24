@@ -15,11 +15,6 @@ import 'react-phone-number-input/style.css'
 import { useTranslation } from 'react-i18next'
 import { theme } from '../../utils/style/theme'
 
-interface PersolInf {
-  nom: string
-  email: string
-  phoneNumber: string
-}
 const Styledtextfield = styled(TextField)({
   '& .MuiFormControl-root': {
     paddingBottom: '10px',
@@ -49,7 +44,7 @@ const StylePhoneNumber = styled(PhoneInput)({
 })
 function FormInf() {
   const { handleSubmit, values, errors, touched, setFieldValue, handleChange } =
-    useFormik<PersolInf>({
+    useFormik({
       initialValues: {
         nom: '',
         email: '',
@@ -57,6 +52,13 @@ function FormInf() {
       },
       onSubmit: (values, { resetForm }) => {
         resetForm()
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(values).toString(),
+        })
+          .then(() => console.log('Form successfully submitted'))
+          .catch((error) => alert(error))
       },
       validationSchema: RegistrationForm,
     })
@@ -72,6 +74,7 @@ function FormInf() {
           display: 'grid',
           gap: '10px',
         }}
+        data-netlify="true"
       >
         <Styledtextfield
           id="outlined-basic"
