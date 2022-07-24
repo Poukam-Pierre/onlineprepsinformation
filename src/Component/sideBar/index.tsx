@@ -88,7 +88,7 @@ function SideInfos() {
       </Typography>
       <Collapse in={userChecked}>
         <Box>
-          <Typography textAlign="justify">
+          <Typography textAlign="justify" component={'span'}>
             <strong>OnlinePreps</strong> ouvre ses portes à deux types
             d'utilisateurs:
             <dl>

@@ -14,6 +14,7 @@ import { RegistrationForm } from './ShemaYup'
 import 'react-phone-number-input/style.css'
 import { useTranslation } from 'react-i18next'
 import { theme } from '../../utils/style/theme'
+import Axios from 'axios'
 
 const Styledtextfield = styled(TextField)({
   '& .MuiFormControl-root': {
@@ -51,14 +52,12 @@ function FormInf() {
         phoneNumber: '',
       },
       onSubmit: (values, { resetForm }) => {
+        Axios.post(`https://onlinepreps.herokuapp.com/api/insert`, {
+          nom: values.nom,
+          email: values.email,
+          phoneNumber: values.phoneNumber,
+        }).then(() => alert('Données enregistrées avec succès'))
         resetForm()
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(values).toString(),
-        })
-          .then(() => console.log('Form successfully submitted'))
-          .catch((error) => alert(error))
       },
       validationSchema: RegistrationForm,
     })
