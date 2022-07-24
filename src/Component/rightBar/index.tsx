@@ -52,13 +52,23 @@ function RightBarInfos() {
   })
   return (
     <Box
-      flex={2}
       p={2}
       textAlign="center"
-      sx={{ display: 'flex', flexDirection: 'column', gap: '40px' }}
+      sx={{
+        display: 'grid',
+        flexWrap: 'wrap',
+        alignContent: 'space-around',
+        gap: { xs: '15px', sm: 0 },
+      }}
     >
       <Box>
-        <Typography sx={{ padding: '30px', fontWeight: 'bold' }} variant="h5">
+        <Typography
+          sx={{
+            padding: '10px',
+            fontWeight: 'bold',
+          }}
+          variant="h5"
+        >
           {t('death_time')}
         </Typography>
         <Clock

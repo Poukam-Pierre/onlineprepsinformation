@@ -13,7 +13,7 @@ import { useFormik } from 'formik'
 import { RegistrationForm } from './ShemaYup'
 import 'react-phone-number-input/style.css'
 import { useTranslation } from 'react-i18next'
-// import { con } from '../connexion'
+import { theme } from '../../utils/style/theme'
 
 interface PersolInf {
   nom: string
@@ -56,17 +56,6 @@ function FormInf() {
         phoneNumber: '',
       },
       onSubmit: (values, { resetForm }) => {
-        // con.connect(function (err: any) {
-        //   if (err) throw err
-        //   alert('Echec de sauvegarde de données personnelles')
-        //   var sql =
-        //     'INSERT INTO internautes(user_name, email, phone_number) VALUES(`{values.name}`, `{values.email}`, `{values.phone}`)'
-        //   con.query(sql, function (err: any, result: any) {
-        //     if (err) throw err
-        //     alert('Données sauvégardées avec succès')
-        //   })
-        // })
-        // console.log(values)
         resetForm()
       },
       validationSchema: RegistrationForm,
@@ -74,58 +63,69 @@ function FormInf() {
 
   const { t } = useTranslation()
   return (
-    <Box
-      component="form"
-      onSubmit={handleSubmit}
-      sx={{ display: 'grid', gap: '10ps' }}
-    >
-      <Styledtextfield
-        id="outlined-basic"
-        label={t('name')}
-        type="text"
-        name="nom"
-        onChange={handleChange}
-        value={values.nom}
-        variant="outlined"
-        sx={{ width: '100%' }}
-        {...(errors.nom && touched.nom
-          ? { error: true, helperText: errors.nom }
-          : '')}
-      />
-      <Styledtextfield
-        id="outlined-basic2"
-        label={t('email')}
-        type="text"
-        name="email"
-        value={values.email}
-        onChange={handleChange}
-        variant="outlined"
-        sx={{ width: '100%' }}
-        {...(errors.email && touched.email
-          ? { error: true, helperText: errors.email }
-          : '')}
-      />
-      <StylePhoneNumber
-        value={values.phoneNumber}
-        onChange={(number) => setFieldValue(`phoneNumber`, number?.toString())}
-        placeholder={t('phone_number')}
-      />
-      {errors.phoneNumber && touched.phoneNumber ? (
-        <FormHelperText error>{errors.phoneNumber}</FormHelperText>
-      ) : (
-        ''
-      )}
-      <Box display="flex" justifyContent="center" p={2}>
-        <Fab variant="extended" aria-label="add" type="submit">
-          <Typography variant="button" paddingLeft="5px">
-            {t('btn_submit')}
-          </Typography>
-        </Fab>
+    <fieldset>
+      <legend>Vous signaler dès le lancement</legend>
+      <Box
+        component="form"
+        onSubmit={handleSubmit}
+        sx={{
+          display: 'grid',
+          gap: '10px',
+        }}
+      >
+        <Styledtextfield
+          id="outlined-basic"
+          label={t('name')}
+          type="text"
+          name="nom"
+          onChange={handleChange}
+          value={values.nom}
+          variant="outlined"
+          sx={{ width: '100%' }}
+          {...(errors.nom && touched.nom
+            ? { error: true, helperText: errors.nom }
+            : '')}
+        />
+        <Styledtextfield
+          id="outlined-basic2"
+          label={t('email')}
+          type="text"
+          name="email"
+          value={values.email}
+          onChange={handleChange}
+          variant="outlined"
+          sx={{ width: '100%' }}
+          {...(errors.email && touched.email
+            ? { error: true, helperText: errors.email }
+            : '')}
+        />
+        <StylePhoneNumber
+          value={values.phoneNumber}
+          onChange={(number) =>
+            setFieldValue(`phoneNumber`, number?.toString())
+          }
+          placeholder={t('phone_number')}
+        />
+        {errors.phoneNumber && touched.phoneNumber ? (
+          <FormHelperText error>{errors.phoneNumber}</FormHelperText>
+        ) : (
+          ''
+        )}
+        <Box display="flex" justifyContent="center" p={2}>
+          <Fab
+            variant="extended"
+            aria-label="add"
+            type="submit"
+            sx={{ bgcolor: theme.palette.primary.light }}
+          >
+            <Typography variant="button" paddingLeft="5px">
+              {t('btn_submit')}
+            </Typography>
+          </Fab>
+        </Box>
       </Box>
-    </Box>
+    </fieldset>
   )
 }
-
-// var sql ="INSERT INTO internautes(user_name, email, phone_number) VALUES(`{values.name}`, `{values.email}`, `{values.phone}`)"
 
 export default FormInf

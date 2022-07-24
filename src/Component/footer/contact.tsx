@@ -4,7 +4,13 @@ import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded'
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded'
 import WhatsappRoundedIcon from '@mui/icons-material/WhatsappRounded'
 import MailRoundedIcon from '@mui/icons-material/MailRounded'
-import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  styled,
+} from '@mui/material'
 import { theme } from '../../utils/style/theme'
 
 interface contactInformations {
@@ -33,7 +39,13 @@ const contacts: contactInformations[] = [
 
 function ContactUs() {
   return (
-    <List>
+    <List
+      sx={{
+        display: { xs: 'initial', sm: 'flex' },
+        paddingTop: 0,
+        paddingBottom: 0,
+      }}
+    >
       {contacts.map((contact, index) => (
         <ListItem key={`${index}`}>
           <ListItemIcon sx={{ color: theme.palette.secondary.contrastText }}>

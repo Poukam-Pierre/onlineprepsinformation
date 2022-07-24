@@ -6,7 +6,7 @@ import { Paper } from '@mui/material'
 
 function Clock({ timerDays, timerHours, timerMinutes, timerSeconds, t }) {
   return (
-    <Box className="container" component={Paper}>
+    <Box className="container" component={Paper} sx={{ borderRaduis: '15px' }}>
       <Fragment>
         <section className="timer-container">
           <section className="timer">
