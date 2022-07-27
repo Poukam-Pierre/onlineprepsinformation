@@ -65,7 +65,7 @@ function FormInf() {
   const { t } = useTranslation()
   return (
     <fieldset>
-      <legend>Vous signaler dès le lancement</legend>
+      <legend>{t('notify')}</legend>
       <Box
         component="form"
         onSubmit={handleSubmit}

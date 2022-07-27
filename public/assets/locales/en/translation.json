@@ -13,9 +13,66 @@
     "tagline":"A time saving solution",
     "copyright":"All right reserved",
     "brand": "Online Preps",
+    "notify":"Notify you at launch",
     "goals":{
         "title": "Objectives",
-        "visible_part":"Online Preps is an online skills assessment school for learners who wish to obtain a driving licence. Whatever the licence category, Online Preps offers national past tests to help you assess yourself.",
-        "hidden_part":"The mission of OnlinePreps is to provide Cameroonians and Gabonese with a platform for national driving tests. On OnlinePreps, you will find all the official driving licence tests that have already been passed in all categories. The Cameroonian or Gabonese learner will be able to practice under test conditions in order to prepare for the national exam. At the end of each composition, an automatic correction will be made with ample explanations on the different questions of the test"
+        "visible_part":"The objective of the OnlinePreps project is to offer a national driving test platform to all learners who want to know the highway code.",
+        "hidden_part":"The platform will contain all the official driving licence tests that have already been passed in all categories. The learner on the platform will be able to practice under test conditions in order to prepare for the national test. At the end of each test, an automatic correction is made with detailed explanations on the different questions of the test."
+    },
+      "why":{
+        "title": "Why?",
+        "visible_part":"Like any examination, preparation and self-assessment of the candidate's abilities are necessary. The driving licence is no exception to this rule.",
+        "hidden_part1":"How do I get the test in the category of licence I want? How can I self-assess regardless of where I am?  Who can guide me through the different choices and explain the reasons for each choice, and how can I assess my abilities over a longer period of time?",
+        "hidden_part2":"All these questions are issues that we solve with OnlinePreps. To be able to train without constraints of time or place. Being able to self-assess and check your growth over a relatively long period of time."
+  
+    },
+      "forWho":{
+        "title": "Who is it for?",
+        "visible_part":"OnlinePreps is aimed not only at learners who want to obtain a driving licence but also at anyone who wants to test themselves on the highway code. Three main categories of users will be called upon to communicate on the platform:",
+        "hidden_part":{
+          "title1": "Learners",
+          "hidden1_1": "These are people who want to self-assess, to compose the driving licence and to assess their progress in the learning curve in question. These people could be either potential candidates for driving tests or people who want to do a self-assessment on the highway code. A range of possibilities are available to them, including composing the tests chosen according to the criteria of year, department, session, category, etc.",
+          "hidden1_2":"Becoming a learner requires creating a learner account and subscribing to a type of membership for a fee that will be set.",
+          "title2":"Our partners",
+          "hidden2_1": "These are people who wish to participate in the progress of the project. These will be either functional driving schools (legal entities) or individuals (natural persons). The use of the above solution in approved training centers will help to make the test papers accessible and to monitor the progress of candidates closely. This is done without any time or location constraints. A partner will ensure the evolution of the project by selling us the missing tests on the platform and by registering the learners under its identifier (Preps code). Each partner will have its own Preps code with which it can register its candidates on the platform. A rate of up to 20% of the registration fee per candidate will be paid back to the partners at the end of each training session. Anyone with a community of learners can become a partner as registration is free. Furthermore, a partner account is subject to a strict quota in terms of learners and tests. A partner account with no activity will be reported or even deleted.",
+          "title3": "Administrators",
+          "hidden3_1": "These are the various administrators of the project.  Those who ensure the smooth running of the platform."
+        }  },
+      "howThisWork":{
+        "title": "How does it work?",
+        "visible_part":"Each user of OnlinePreps has a unique set of features. This means that a learner will be able to carry out certain activities that are only specific to that type of person. Partners will have their share of activities. An administrator will have a site management role. Specifically, it is about :",
+        "hidden_part":{
+          "title1": "For the learner",
+          "hidden1_1": "Selling exam papers that do not exist on the platform ;",
+          "hidden1_2":"Compose the examination papers whose category corresponds to the type of subscription;",
+          "hidden1_3":"Search for tests by year, category, session and department;",
+          "hidden1_4":"Take out subscriptions (Normal Single which will entitle you to one category of licence and Normal GOLD which will entitle you to all categories);",
+          "hidden1_5":"Becoming a partner ;",
+          "title2":"For a partner",
+          "hidden2_2": "Register candidates using their preps code;",
+          "hidden2_3": "Monitor the evolution of the skills of its candidates registered on the platform;",
+          "hidden2_4": "Make monetary transactions from your Preps account (withdraw money, offer a subscription, pay a subscription);",
+          "hidden2_5": "Becoming a learner ;",
+          "title3": "For administrators",
+          "hidden3_1": "Create, modify or delete examination papers from the platform;",
+          "hidden3_2": "Report a partner account ;",
+          "hidden3_3": "Delete a partner account ;",
+          "hidden3_4": "Validate requests for monetary transactions ;"
+        }
+    },
+      "termToUse":{
+        "title": "CONDITION OF USE",
+        "visible_part":"Onlinepreps is a proprietary project.",
+        "hidden_part":"Each user has a share of responsibility towards the platform and depends on the hat he wears for this purpose. We undertake to provide the various services offered in strict compliance with the regulations in force. We intend to further develop this section in order to provide a better framework for the use and protection of users."
+    },
+      "owner":{
+        "title": "Ownership company",
+        "visible_part":"OnlinePreps is an initiative of Poukam Radio tech SARL. Its objective is to make education accessible to all.",
+        "hidden_part":"It is part of several national resolutions, one of which is digital inclusion. In order to increase skills in the transport sector, we offer this solution for monitoring learners in driving licence theory, with results and explanations certified by experts in the field."
+    },
+      "vision":{
+        "title": "",
+        "visible_part":"Poukam Radio tech plans to expand this project by adding more options (theory courses, accompanying video, teleworking, etc).",
+        "hidden_part":"To make OnlinePreps a platform where every training center will find an advantage to be. As a facilitator of candidate management, OnlinePreps will be able to be the reference in the control of competence levels. It will be able to push back the temporal and geographical limits, so that anyone wishing to train in driving can do so without difficulty and without constraint."
     }
-}
+  }

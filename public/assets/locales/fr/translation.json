@@ -12,10 +12,67 @@
     "tagline":"Une solution qui nous fait gagner du temps",
     "copyright":"Tout droit reservé",
     "brand": "Online Preps",
+    "notify":"Vous signaler dès le lancement",
     "goals":{
       "title": "Objectifs",
-      "visible_part":"Online Preps est une école en ligne d'évaluation de capacités des apprenants ou désireux d'avoir un permis de conduire. Quelle que soit la catégorie de permis, Online Preps propose des épreuves nationaux antérieur pour vous aider à vous évaluer.",
-      "hidden_part":"La mission d'OnlinePreps est d'offrir aux camerounais et aux gabonais dans un premier temps, une plateforme d'épreuves nationales du permis de conduire. Il sera question de retrouver sur OnlinePreps tous les examens officiels déjà passés du permis de conduire dans toutes les catégories. L'apprenant camerounais ou gabonais se retrouvant sur cette plateforme pourra s'exercer dans les conditions d'examen en vue de se préparer pour l'examen national. A la fin de chaque composition, une correction automatique sera effectuée avec d'amples explications sur les différentes questions de l'épreuves."
-  }
+      "visible_part":"L'objectif du projet OnlinePreps est d’offrir à tout apprenant désireux de connaitre le code de la route, une plateforme d'épreuves nationales du permis de conduire. ",
+      "hidden_part":"Il sera question de retrouver sur la plateforme toutes les épreuves officielles du permis de conduire déjà passées dans toutes les catégories confondues. L'apprenant se retrouvant sur la plateforme pourra s'exercer dans les conditions d'examen en vue de se préparer pour l'examen national. A la fin de chaque examen, une correction automatique est effectuée avec d'amples explications sur les différentes questions de l'épreuve."
+  },
+    "why":{
+      "title": "Pourquoi?",
+      "visible_part":"Comme tout examen, la préparation et l’auto-évaluation sur les capacités du candidat sont nécessaires. Le permis de conduire ne s’écarte pas de cette règle.",
+      "hidden_part1":"Comment obtenir les épreuves d’examen dans la catégorie du permis que je souhaite ? Comment pourrais-je m’auto-évaluer quel que soit l’endroit où je me trouve ?  Qui peut m’orienter sur les différents choix possibles et m’expliquer le pourquoi de chaque choix et enfin comment évaluer mes capacités sur un temps plus long ?",
+      "hidden_part2":"Toutes ces questions sont des thématiques que nous résolvons avec OnlinePreps. Pouvoir se former sans contrainte ni de temps ni de lieu. Pouvoir s’auto-évaluer et vérifier sa croissance sur un temps relativement long."
 
+  },
+    "forWho":{
+      "title": "Pour qui?",
+      "visible_part":"OnlinePreps s’adresse non seulement aux apprenants désireux d’obtenir un permis de conduire mais également à tout curieux voulant s’auto-évaluer sur le code de la route. Trois grandes catégories d’utilisateurs seront appelées à communiquer sur la plateforme :",
+      "hidden_part":{
+        "title1": "Les apprenants",
+        "hidden1_1": "Il s’agit des personnes voulant s’auto-évaluer, composer le permis de conduire et apprécier leur courbe de progression dans l’apprentissage en question. Ces personnes pourraient être soit des potentiels candidats aux examens du permis de conduire, soit des désireux d’une auto-évaluation sur le code de la route. Une panoplie de possibilités s’offre à eux, entre autres le fait de composer les épreuves choisies selon les critères année, département, session, catégorie, etc.",
+        "hidden1_2":"Devenir un apprenant nécessite de créer un compte d’apprenant et de souscrire à un type d’abonnement moyennant un prix qui sera fixé.",
+        "title2":"Les partenaires",
+        "hidden2_1": "Il s’agit ici de personnes désirant participer au progrès du projet. Celles-ci seront soit des auto-écoles fonctionnelles (personnes morales), soit des particuliers (personnes physiques). L’utilisation de la solution précédente dans les centres de formation agrées contribuera à rendre accessible les épreuves d’examen et à suivre l’évolution des candidats de près. Ceci sans aucune contrainte de temps ou de lieux. Un partenaire assure l’évolution du projet en nous vendant les épreuves absentes sur la plateforme et en inscrivant les apprenants sous son identifiant (code Preps). Chaque partenaire aura un code Preps propre à lui avec lequel il pourra enregistrer ses candidats sur la plateforme. Un taux allant jusqu’à 20% des frais d’inscription par candidats sera reversé aux partenaires à l’échéance de chaque session de formation. Toute personne ayant une communauté d’apprenants peut devenir partenaire étant donné que l’inscription est gratuite. Par ailleurs, un compte partenaire est soumis à une rigueur de quota en termes d’apprenants et d’épreuves. Un compte partenaire sans activité est signalé, voir supprimé.",
+        "title3": "Les administrateurs",
+        "hidden3_1": "Il s’agit ici des différents administrateurs du projet.  Ceux qui s’assurent du bon fonctionnement de la plateforme. "
+      }  },
+    "howThisWork":{
+      "title": "Comment ça marche",
+      "visible_part":"Chaque utilisateur de OnlinePreps a un ensemble de fonctionnalités qui lui est propre. Ce qui veux dire qu’un apprenant pourra exercer certaines activités qui ne sont propres qu’aux personnes de ce type. Les partenaires auront leurs parts d’activités. Un chargé d’administration aura un rôle gestion de site. Il s’agit concrètement de :",
+      "hidden_part":{
+        "title1": "Pour un apprenant",
+        "hidden1_1": "Vendre les épreuves inexistantes sur la plateforme ;",
+        "hidden1_2":"Composer les épreuves dont la catégorie correspond au type d’abonnement ;",
+        "hidden1_3":"Rechercher les épreuves selon l’année, la catégorie, la session et le département ;",
+        "hidden1_4":"Souscrire à des abonnements (Normal Unique qui donnera droit à une seule catégorie de permis et Normal GOLD qui donnera droit à toutes les catégories) ;",
+        "hidden1_5":"Devenir un partenaire ;",
+        "title2":"Pour un partenaire",
+        "hidden2_2": "Inscrire les candidats grâce à son code preps ;",
+        "hidden2_3": "Suivre de près l’évolution des compétences de ses candidats inscrites sur la plateforme ;",
+        "hidden2_4": "Faire des transactions monétaires de son compte Preps (retirer l’argent, offrir un abonnement, payer un abonnement) ;",
+        "hidden2_5": "Devenir un apprenant ;",
+        "title3": "Pour l'administrateurs",
+        "hidden3_1": "Créer, modifier ou supprimer les épreuves de la plateforme ;",
+        "hidden3_2": "Signaler un compte partenaire ;",
+        "hidden3_3": "Supprimer un compte partenaire ;",
+        "hidden3_4": "Valider les demandes de transactions monétaires ;"
+      }
+  },
+    "termToUse":{
+      "title": "CONDITION D’UTILISATION",
+      "visible_part":"Onlinepreps est un projet propriétaire. ",
+      "hidden_part":"Chaque utilisateur à une part de responsabilité vis-à-vis de la plateforme et dépendant de la casquette qu’il revêt à cet effet. Nous nous engageons à fournir dans le strict respect des réglementations en vigueur, les différents services proposés. Nous comptons enrichir d’avantage cette rubrique afin de mieux cadrer l’utilisation et protéger les utilisateurs."
+  },
+    "owner":{
+      "title": "Societe propritaire",
+      "visible_part":"OnlinePreps est une initiative de la société Poukam Radio tech SARL. Elle s’est fixée pour objectif via ce projet de rendre l’éducation accessible à tous.",
+      "hidden_part":"Il s’inscrit dans le cadre de plusieurs résolutions nationales dont l’une d’elle est l’insertion au numérique. Soucieux d’accroître les compétences dans le secteur des transports, nous proposons cette solution de suivi des apprenants en théorie du permis de conduire, ces solutions s’accompagnant des résultats et explications certifiés par des capésistes."
+  },
+    "vision":{
+      "title": "Vision",
+      "visible_part":"Poukam Radio tech prévoit accroître ce projet en ajoutant plus d’options (Cours théoriques, vidéo d’accompagnement, télétravail, etc). ",
+      "hidden_part":"Faire de Onlinepreps une plateforme où chaque centre de formation trouvera un avantage d’y être. Facilitateur de gestion des candidats, OnlinePreps pourra être la référence dans le contrôle de niveau de compétence. Elles pourront alors repousser les limites temporelles et géographiques, afin de permettre à toute personne désireuse de se former en conduite automobile de la faire sans difficulté et sans contrainte."
+  }
+ 
   }
