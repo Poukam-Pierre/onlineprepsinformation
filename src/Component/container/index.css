@@ -1,0 +1,22 @@
+/*  Made by Poukam Ngamaleu */
+
+.steps-items{
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.steps{
+    background-color: #FAFAFA;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.separator{
+    width: 3px;
+    height: 400px;
+    background-color: #FAFAFA;
+    justify-self: center;
+}

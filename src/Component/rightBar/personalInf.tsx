@@ -15,10 +15,12 @@ import 'react-phone-number-input/style.css'
 import { useTranslation } from 'react-i18next'
 import { theme } from '../../utils/style/theme'
 import Axios from 'axios'
+import ClockTimer from '../rightBar'
 
-const Styledtextfield = styled(TextField)({
-  '& .MuiFormControl-root': {
-    paddingBottom: '10px',
+const StyledFab = styled(Fab)({
+  '&.MuiButtonBase-root': {
+    borderRadius: '15px',
+    width: '13rem',
   },
 })
 
@@ -29,14 +31,18 @@ const StylePhoneNumber = styled(PhoneInput)({
   },
   '& .PhoneInputInput': {
     height: '85%',
-    backgroundColor: 'transparent',
+    backgroundColor: theme.palette.primary.light,
     borderColor: '#000',
-    borderRadius: '5px',
+    borderRadius: '15px',
     borderStyle: 'solid',
     borderWidth: '1px',
     overflow: 'hidden',
-    opacity: '0.5',
     fontSize: '1rem',
+    width: '25rem',
+    textAlign: 'center',
+  },
+  '& .PhoneInputCountry': {
+    display: 'none',
   },
   '& .PhoneInputCountryIcon ': {
     height: '2rem',
@@ -44,89 +50,83 @@ const StylePhoneNumber = styled(PhoneInput)({
   },
 })
 function FormInf() {
-  const { handleSubmit, values, errors, touched, setFieldValue, handleChange } =
-    useFormik({
-      initialValues: {
-        nom: '',
-        email: '',
-        phoneNumber: '',
-      },
-      onSubmit: (values, { resetForm }) => {
-        Axios.post(`https://onlinepreps.herokuapp.com/api/insert`, {
-          nom: values.nom,
-          email: values.email,
-          phoneNumber: values.phoneNumber,
-        }).then(() => alert('Données enregistrées avec succès'))
-        resetForm()
-      },
-      validationSchema: RegistrationForm,
-    })
+  const { handleSubmit, values, errors, touched, setFieldValue } = useFormik({
+    initialValues: {
+      phoneNumber: '',
+    },
+    onSubmit: (values, { resetForm }) => {
+      // Axios.post(`https://onlinepreps.herokuapp.com/api/insert`, {
+      //   nom: values.nom,
+      //   email: values.email,
+      //   phoneNumber: values.phoneNumber,
+      // }).then(() => alert('Données enregistrées avec succès'))
+      resetForm()
+    },
+    validationSchema: RegistrationForm,
+  })
 
   const { t } = useTranslation()
   return (
-    <fieldset>
-      <legend>{t('notify')}</legend>
-      <Box
-        component="form"
-        onSubmit={handleSubmit}
-        sx={{
-          display: 'grid',
-          gap: '10px',
-        }}
-        data-netlify="true"
-      >
-        <Styledtextfield
-          id="outlined-basic"
-          label={t('name')}
-          type="text"
-          name="nom"
-          onChange={handleChange}
-          value={values.nom}
-          variant="outlined"
-          sx={{ width: '100%' }}
-          {...(errors.nom && touched.nom
-            ? { error: true, helperText: errors.nom }
-            : '')}
-        />
-        <Styledtextfield
-          id="outlined-basic2"
-          label={t('email')}
-          type="text"
-          name="email"
-          value={values.email}
-          onChange={handleChange}
-          variant="outlined"
-          sx={{ width: '100%' }}
-          {...(errors.email && touched.email
-            ? { error: true, helperText: errors.email }
-            : '')}
-        />
-        <StylePhoneNumber
-          value={values.phoneNumber}
-          onChange={(number) =>
-            setFieldValue(`phoneNumber`, number?.toString())
-          }
-          placeholder={t('phone_number')}
-        />
-        {errors.phoneNumber && touched.phoneNumber ? (
-          <FormHelperText error>{errors.phoneNumber}</FormHelperText>
-        ) : (
-          ''
-        )}
-        <Box display="flex" justifyContent="center" p={2}>
-          <Fab
-            variant="extended"
-            aria-label="add"
-            type="submit"
-            sx={{ bgcolor: theme.palette.primary.light }}
-          >
-            <Typography variant="button" paddingLeft="5px">
-              {t('btn_submit')}
-            </Typography>
-          </Fab>
+    <Box display="grid">
+      <Box display="grid" gap="30px">
+        <Typography
+          variant="h5"
+          fontSize="25px"
+          fontWeight="600"
+          color={theme.palette.primary.light}
+        >
+          {t('notify')}
+        </Typography>
+        <Box
+          component="form"
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          onSubmit={handleSubmit}
+          gap="30px"
+        >
+          <StylePhoneNumber
+            value={values.phoneNumber}
+            onChange={(number) =>
+              setFieldValue(`phoneNumber`, number?.toString())
+            }
+            placeholder={t('phone_number')}
+          />
+          {errors.phoneNumber && touched.phoneNumber ? (
+            <FormHelperText error>{errors.phoneNumber}</FormHelperText>
+          ) : (
+            ''
+          )}
+          <Box display="flex" justifyContent="center">
+            <StyledFab
+              variant="extended"
+              aria-label="add"
+              type="submit"
+              sx={{ bgcolor: theme.palette.secondary.main }}
+            >
+              <Typography
+                variant="button"
+                paddingLeft="5px"
+                color={theme.palette.primary.light}
+              >
+                {t('btn_submit')}
+              </Typography>
+            </StyledFab>
+          </Box>
         </Box>
       </Box>
-    </fieldset>
+      <Box justifySelf="end">
+        <Typography
+          variant="h6"
+          fontSize="20px"
+          fontFamily="inter"
+          color={theme.palette.secondary.light}
+        >
+          {t('death_time')}
+        </Typography>
+        <ClockTimer />
+      </Box>
+    </Box>
   )
 }
 

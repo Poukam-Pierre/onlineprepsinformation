@@ -15,7 +15,7 @@ const GlobalStyled = createGlobalStyle`
 }
 body{
   margin:0;
-  background-color: #FAF4F4;
+  background-color: #0D3A4A;
 }
 `
 i18n

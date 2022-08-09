@@ -1,7 +1,10 @@
 
 {
-    "welcome_to_onlinepreps": "Welcome to the descriptive environment of the project",
-    "death_time": "IMPLEMENTATION TIME",
+  "home_translate" : "HOME",
+  "fonctionning":"How does it work ?",
+    "welcome_to_onlinepreps": "Prepare for your exams with ease on",
+    "welcom_message": "Have access to all your tests in order to better face your exams. Preparation and self-assessment of the candidate's abilities are necessary. The driving licence is no exception to this rule",
+    "death_time": "The platform will be available in :",
     "days": "Days",
     "hours": "Hours", 
     "minutes":"Minutes",
@@ -61,18 +64,25 @@
         }
     },
       "termToUse":{
-        "title": "CONDITION OF USE",
+        "title": "Condition of use",
         "visible_part":"Onlinepreps is a proprietary project.",
         "hidden_part":"Each user has a share of responsibility towards the platform and depends on the hat he wears for this purpose. We undertake to provide the various services offered in strict compliance with the regulations in force. We intend to further develop this section in order to provide a better framework for the use and protection of users."
     },
       "owner":{
         "title": "Ownership company",
-        "visible_part":"OnlinePreps is an initiative of Poukam Radio tech SARL. Its objective is to make education accessible to all.",
+        "visible_part":"Poukam Radio tech SARL",
         "hidden_part":"It is part of several national resolutions, one of which is digital inclusion. In order to increase skills in the transport sector, we offer this solution for monitoring learners in driving licence theory, with results and explanations certified by experts in the field."
     },
       "vision":{
         "title": "",
         "visible_part":"Poukam Radio tech plans to expand this project by adding more options (theory courses, accompanying video, teleworking, etc).",
         "hidden_part":"To make OnlinePreps a platform where every training center will find an advantage to be. As a facilitator of candidate management, OnlinePreps will be able to be the reference in the control of competence levels. It will be able to push back the temporal and geographical limits, so that anyone wishing to train in driving can do so without difficulty and without constraint."
+    },
+    "about":{
+      "title": "About",
+      "company":"About the company",
+      "privacy": "Privacy",
+      "support":"Contact Support",
+      "sale":"Contact Sales"
     }
   }

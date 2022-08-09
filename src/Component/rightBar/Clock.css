@@ -6,15 +6,13 @@
 
 .clock {
     position: relative;
-    margin: a;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    background: linear-gradient(#051817, #0e3839);
+    gap:3px;
+    background: #0D3A4A;
     width: 100%;
-    color: #673AB7;
-    text-shadow: 1px 1px 7px;
-    border: 2px solid silver;
+    color: #FAFAFA;
+    
 }
 
 .clock section {
@@ -22,11 +20,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    border: 2px solid silver;
+    padding: 0.8rem;
 }
 
 .clock section p {
-    font-size: 3.5rem;
+    font-size: 40px;
+    font-weight: 600;
 }
 .clock section small {
     color: silver;

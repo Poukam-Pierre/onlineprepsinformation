@@ -41,7 +41,6 @@ function ContactUs() {
   return (
     <List
       sx={{
-        display: { xs: 'initial', sm: 'flex' },
         paddingTop: 0,
         paddingBottom: 0,
       }}

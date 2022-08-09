@@ -1,6 +1,9 @@
 {
-    "welcome_to_onlinepreps": "Bienvenue dans l'environnement descriptif du projet",
-    "death_time": "TEMPS DE MIS EN OEUVRE",
+    "home_translate" : "ACCUEIL",
+    "fonctionning":"Comment ça marche ?",
+    "welcome_to_onlinepreps": "Préparez vos examens en toute sérénité sur",
+    "welcom_message":"Ayez accès à toutes vos épreuves afin de mieux affronter vos examens. La préparation et l'auto-évaluation sur les capacités du candidat sont nécessaires. Le permis de conduire ne s'écarte pas de cette règle",
+    "death_time": "La plateforme sera disponible dans :",
     "days": "Jours",
     "hours": "Heures",
     "minutes":"Minutes",
@@ -60,19 +63,26 @@
       }
   },
     "termToUse":{
-      "title": "CONDITION D’UTILISATION",
+      "title": "Condition d'utilisation",
       "visible_part":"Onlinepreps est un projet propriétaire. ",
       "hidden_part":"Chaque utilisateur à une part de responsabilité vis-à-vis de la plateforme et dépendant de la casquette qu’il revêt à cet effet. Nous nous engageons à fournir dans le strict respect des réglementations en vigueur, les différents services proposés. Nous comptons enrichir d’avantage cette rubrique afin de mieux cadrer l’utilisation et protéger les utilisateurs."
   },
     "owner":{
       "title": "Societe propritaire",
-      "visible_part":"OnlinePreps est une initiative de la société Poukam Radio tech SARL. Elle s’est fixée pour objectif via ce projet de rendre l’éducation accessible à tous.",
+      "visible_part":"Poukam Radio tech SARL",
       "hidden_part":"Il s’inscrit dans le cadre de plusieurs résolutions nationales dont l’une d’elle est l’insertion au numérique. Soucieux d’accroître les compétences dans le secteur des transports, nous proposons cette solution de suivi des apprenants en théorie du permis de conduire, ces solutions s’accompagnant des résultats et explications certifiés par des capésistes."
   },
     "vision":{
       "title": "Vision",
       "visible_part":"Poukam Radio tech prévoit accroître ce projet en ajoutant plus d’options (Cours théoriques, vidéo d’accompagnement, télétravail, etc). ",
       "hidden_part":"Faire de Onlinepreps une plateforme où chaque centre de formation trouvera un avantage d’y être. Facilitateur de gestion des candidats, OnlinePreps pourra être la référence dans le contrôle de niveau de compétence. Elles pourront alors repousser les limites temporelles et géographiques, afin de permettre à toute personne désireuse de se former en conduite automobile de la faire sans difficulté et sans contrainte."
+  },
+  "about":{
+    "title": "À propos",
+    "company":"À propos de la société",
+    "privacy": "Confidentialité",
+    "support":"Contact",
+    "sale":"Contact de vente"
   }
  
   }
