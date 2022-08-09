@@ -43,10 +43,11 @@ function ContactUs() {
       sx={{
         paddingTop: 0,
         paddingBottom: 0,
+        justifySelf: 'center',
       }}
     >
       {contacts.map((contact, index) => (
-        <ListItem key={`${index}`}>
+        <ListItem key={`${index}`} sx={{ padding: 0 }}>
           <ListItemIcon sx={{ color: theme.palette.secondary.contrastText }}>
             {contact.icon}
           </ListItemIcon>

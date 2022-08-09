@@ -1,22 +1,27 @@
 /*  Made by Poukam Ngamaleu */
 
-.steps-items{
-    display: grid;
-    grid-auto-flow: row;
-    align-items: center;
-    justify-content: center;
+li{
+    list-style: none;
 }
 
-.steps{
-    background-color: #FAFAFA;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+.title{
+    position: relative;
 }
 
-.separator{
-    width: 3px;
-    height: 400px;
+.title::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
     background-color: #FAFAFA;
-    justify-self: center;
+    border-radius: 50% ;
+    top:30%;
+}
+
+.title3::before,.title1::before{
+    right: -50px;
+}
+
+.title2::before{
+    left: -50px;
 }

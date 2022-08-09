@@ -18,24 +18,45 @@ function Footer() {
       justifyContent="center"
       textAlign="center"
       bgcolor={theme.palette.primary.main}
-      color={theme.palette.primary.light}
-      p={12}
+      color={theme.palette.secondary.light}
+      padding="96px 96px 20px"
     >
-      <Box>
+      <Box
+        textAlign="initial"
+        sx={{
+          display: 'grid',
+          gap: '50px',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: 'fit-content',
+        }}
+      >
         <Box>
-          <Typography>{t('termToUse.title')}</Typography>
+          <Typography variant="h6">{t('termToUse.title')}</Typography>
           <Typography>{t('termToUse.visible_part')}</Typography>
         </Box>
         <AboutUs />
         <Box>
-          <Typography>{t('owner.title')}</Typography>
+          <Typography variant="h6">{t('owner.title')}</Typography>
           <Typography>{t('owner.visible_part')}</Typography>
         </Box>
       </Box>
-      <Box>
-        <Box component="img" sx={{ width: 400 }} src={logo} alt="OnlinePreps" />
+      <Box
+        sx={{
+          display: 'grid',
+          gap: '150px',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Box
+          component="img"
+          sx={{ width: 200, justifySelf: 'center' }}
+          src={logo}
+          alt="OnlinePreps"
+        />
         <ContactUs />
-        <Typography variant="h6">
+        <Typography variant="caption" fontSize="20px" fontWeight="600">
           {`OnlinePreps@${new Date().getFullYear()}`}. {t('copyright')}
         </Typography>
       </Box>

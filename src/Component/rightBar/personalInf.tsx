@@ -1,9 +1,11 @@
 // Made by Poukam Ngamaleu
 
 import {
+  Alert,
   Box,
   Fab,
   FormHelperText,
+  Snackbar,
   styled,
   TextField,
   Typography,
@@ -16,6 +18,7 @@ import { useTranslation } from 'react-i18next'
 import { theme } from '../../utils/style/theme'
 import Axios from 'axios'
 import ClockTimer from '../rightBar'
+import { useState } from 'react'
 
 const StyledFab = styled(Fab)({
   '&.MuiButtonBase-root': {
@@ -50,16 +53,16 @@ const StylePhoneNumber = styled(PhoneInput)({
   },
 })
 function FormInf() {
+  const [open, setOpen] = useState<boolean>(false)
+
   const { handleSubmit, values, errors, touched, setFieldValue } = useFormik({
     initialValues: {
       phoneNumber: '',
     },
     onSubmit: (values, { resetForm }) => {
-      // Axios.post(`https://onlinepreps.herokuapp.com/api/insert`, {
-      //   nom: values.nom,
-      //   email: values.email,
-      //   phoneNumber: values.phoneNumber,
-      // }).then(() => alert('Données enregistrées avec succès'))
+      Axios.post(`https://onlinepreps.herokuapp.com/api/insert`, {
+        phoneNumber: values.phoneNumber,
+      }).then(() => setOpen(true))
       resetForm()
     },
     validationSchema: RegistrationForm,
@@ -126,6 +129,11 @@ function FormInf() {
         </Typography>
         <ClockTimer />
       </Box>
+      <Snackbar open={open} autoHideDuration={6000}>
+        <Alert severity="success" sx={{ width: '100%' }}>
+          This is a success message!
+        </Alert>
+      </Snackbar>
     </Box>
   )
 }
