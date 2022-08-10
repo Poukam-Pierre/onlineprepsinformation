@@ -144,6 +144,7 @@ function FormInf() {
           }}
           fontFamily="inter"
           color={theme.palette.secondary.light}
+          id="ancre"
         >
           {t('death_time')}
         </Typography>

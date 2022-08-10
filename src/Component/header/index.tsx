@@ -84,8 +84,8 @@ function Header() {
           aria-label="online tabs"
           textColor="inherit"
         >
-          <Tab label={t('home_translate')} />
-          <Tab label={t('fonctionning')} />
+          <Tab label={t('home_translate')} component="a" href="#" />
+          <Tab label={t('fonctionning')} component="a" href="#ancre" />
         </AntTabs>
 
         <Box>
