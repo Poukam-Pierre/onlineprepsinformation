@@ -25,3 +25,13 @@ li{
 .title2::before{
     left: -50px;
 }
+
+@media(max-width: 900px){
+    .title3::before,.title1::before{
+        left: -34px;
+    }
+    
+    .title2::before{
+        left: -34px;
+    }
+}

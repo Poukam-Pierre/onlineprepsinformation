@@ -10,25 +10,25 @@ function AboutUs() {
     <Box>
       <Typography variant="h6">{t('about.title')}</Typography>
       <List>
-        <ListItem sx={{ padding: 0 }}>
+        <ListItem sx={{ padding: 0, textAlign: 'center' }}>
           <ListItemText
             primary={t('about.company')}
             primaryTypographyProps={{ fontSize: '18px' }}
           />
         </ListItem>
-        <ListItem sx={{ padding: 0 }}>
+        <ListItem sx={{ padding: 0, textAlign: 'center' }}>
           <ListItemText
             primary={t('about.support')}
             primaryTypographyProps={{ fontSize: '18px' }}
           />
         </ListItem>
-        <ListItem sx={{ padding: 0 }}>
+        <ListItem sx={{ padding: 0, textAlign: 'center' }}>
           <ListItemText
             primary={t('about.sale')}
             primaryTypographyProps={{ fontSize: '18px' }}
           />
         </ListItem>
-        <ListItem sx={{ padding: 0 }}>
+        <ListItem sx={{ padding: 0, textAlign: 'center' }}>
           <ListItemText
             primary={t('about.privacy')}
             primaryTypographyProps={{ fontSize: '18px' }}

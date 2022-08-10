@@ -8,23 +8,27 @@ import car_image from '../../asset/car_image.svg'
 function WelcomMsg() {
   const { t } = useTranslation()
   return (
-    <Box p={2} display="grid" gridTemplateColumns="1fr 2fr">
+    <Box
+      p={2}
+      sx={{ display: { xs: 'initial', md: 'grid' } }}
+      gridTemplateColumns="1fr 2fr"
+    >
       <Box display="grid" gridTemplateRows="1fr 1.2fr" gap="40px">
         <Box>
           <Typography
             variant="h2"
             fontFamily="Open Sans"
             color={theme.palette.primary.light}
-            fontSize="45px"
             fontWeight="600"
+            sx={{ fontSize: { xs: '25px', sm: '45px' } }}
           >
             {t('welcome_to_onlinepreps')}
           </Typography>
           <Typography
             variant="h3"
             fontFamily="Open Sans"
-            fontSize="45px"
             fontWeight="600"
+            sx={{ fontSize: { xs: '25px', sm: '45px' } }}
           >
             <strong style={{ color: 'yellow' }}>Online</strong>
             <strong style={{ color: '#2092BA' }}>Preps...</strong>
@@ -32,7 +36,7 @@ function WelcomMsg() {
         </Box>
         <Typography
           variant="body1"
-          fontSize="20px"
+          sx={{ fontSize: { xs: '12px', sm: '20px' } }}
           color={theme.palette.primary.light}
         >
           {t('welcom_message')}
@@ -42,7 +46,11 @@ function WelcomMsg() {
         component="img"
         src={car_image}
         alt="car_image"
-        sx={{ justifySelf: 'center', alignSelf: 'self-end' }}
+        sx={{
+          justifySelf: 'center',
+          alignSelf: 'self-end',
+          display: { xs: 'none', md: 'initial' },
+        }}
       />
     </Box>
   )

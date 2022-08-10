@@ -23,7 +23,6 @@ import { useState } from 'react'
 const StyledFab = styled(Fab)({
   '&.MuiButtonBase-root': {
     borderRadius: '15px',
-    width: '13rem',
   },
 })
 
@@ -32,18 +31,7 @@ const StylePhoneNumber = styled(PhoneInput)({
   '& .PhoneInputCountrySelectArrow': {
     height: '0.5em',
   },
-  '& .PhoneInputInput': {
-    height: '85%',
-    backgroundColor: theme.palette.primary.light,
-    borderColor: '#000',
-    borderRadius: '15px',
-    borderStyle: 'solid',
-    borderWidth: '1px',
-    overflow: 'hidden',
-    fontSize: '1rem',
-    width: '25rem',
-    textAlign: 'center',
-  },
+
   '& .PhoneInputCountry': {
     display: 'none',
   },
@@ -70,11 +58,14 @@ function FormInf() {
 
   const { t } = useTranslation()
   return (
-    <Box display="grid">
+    <Box
+      sx={{ display: { xs: 'flex', sm: 'grid' }, gap: { xs: '30px', sm: 0 } }}
+      flexDirection="column"
+    >
       <Box display="grid" gap="30px">
         <Typography
           variant="h5"
-          fontSize="25px"
+          sx={{ fontSize: { xs: '16px', sm: '25px' } }}
           fontWeight="600"
           color={theme.palette.primary.light}
         >
@@ -83,10 +74,13 @@ function FormInf() {
         <Box
           component="form"
           display="flex"
+          sx={{
+            display: { xs: 'grid', sm: 'flex' },
+            gap: { xs: 2, sm: '30px' },
+          }}
           flexDirection="row"
           alignItems="center"
           onSubmit={handleSubmit}
-          gap="30px"
         >
           <StylePhoneNumber
             value={values.phoneNumber}
@@ -94,6 +88,20 @@ function FormInf() {
               setFieldValue(`phoneNumber`, number?.toString())
             }
             placeholder={t('phone_number')}
+            sx={{
+              '& .PhoneInputInput': {
+                height: '85%',
+                backgroundColor: theme.palette.primary.light,
+                borderColor: '#000',
+                borderRadius: '15px',
+                borderStyle: 'solid',
+                borderWidth: '1px',
+                overflow: 'hidden',
+                fontSize: '1rem',
+                width: { xs: 'auto', sm: '25rem' },
+                textAlign: 'center',
+              },
+            }}
           />
           {errors.phoneNumber && touched.phoneNumber ? (
             <FormHelperText error>{errors.phoneNumber}</FormHelperText>
@@ -105,7 +113,10 @@ function FormInf() {
               variant="extended"
               aria-label="add"
               type="submit"
-              sx={{ bgcolor: theme.palette.secondary.main }}
+              sx={{
+                bgcolor: theme.palette.secondary.main,
+                '&.MuiButtonBase-root': { width: { xs: '9rem', md: '13rem' } },
+              }}
             >
               <Typography
                 variant="button"
@@ -118,10 +129,19 @@ function FormInf() {
           </Box>
         </Box>
       </Box>
-      <Box justifySelf="end">
+      <Box
+        justifySelf="end"
+        sx={{
+          display: { xs: 'grid', sm: 'initial' },
+          justifyContent: 'center',
+        }}
+      >
         <Typography
           variant="h6"
-          fontSize="20px"
+          sx={{
+            fontSize: { xs: '15px', sm: '20px' },
+            textAlign: { xs: 'center', sm: 'initial' },
+          }}
           fontFamily="inter"
           color={theme.palette.secondary.light}
         >

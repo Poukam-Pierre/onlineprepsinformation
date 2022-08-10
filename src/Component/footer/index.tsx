@@ -13,13 +13,15 @@ function Footer() {
 
   return (
     <Box
-      display="grid"
+      sx={{
+        display: { xs: 'inherit', md: 'grid' },
+        padding: { xs: '20px', sm: '96px 96px 20px' },
+      }}
       gridTemplateColumns="1fr 1fr"
       justifyContent="center"
       textAlign="center"
       bgcolor={theme.palette.primary.main}
       color={theme.palette.secondary.light}
-      padding="96px 96px 20px"
     >
       <Box
         textAlign="initial"
@@ -29,6 +31,8 @@ function Footer() {
           alignItems: 'center',
           justifyContent: 'center',
           height: 'fit-content',
+          textAlign: { xs: 'center', md: 'initial' },
+          paddingBottom: { xs: '60px', md: 'initial' },
         }}
       >
         <Box>
@@ -51,7 +55,11 @@ function Footer() {
       >
         <Box
           component="img"
-          sx={{ width: 200, justifySelf: 'center' }}
+          sx={{
+            width: 200,
+            justifySelf: 'center',
+            display: { xs: 'none', md: 'initial' },
+          }}
           src={logo}
           alt="OnlinePreps"
         />

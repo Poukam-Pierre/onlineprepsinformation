@@ -7,7 +7,7 @@ import Containers from '../../Component/container'
 
 function Home() {
   return (
-    <Box p={10}>
+    <Box sx={{ padding: { xs: 3, md: 10 } }}>
       <WelcomMsg />
       <FormInf />
       <Containers />
