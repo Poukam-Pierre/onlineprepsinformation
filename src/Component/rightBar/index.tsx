@@ -4,7 +4,6 @@ import { Box } from '@mui/system'
 import Clock from './Clock'
 import { useState, useEffect } from 'react'
 import './Clock.css'
-import { Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 
 function ClockTimer() {
@@ -18,7 +17,7 @@ function ClockTimer() {
   let interval: any
 
   const startTimer = () => {
-    const countDownDate = new Date('december 30, 2022').getTime()
+    const countDownDate = new Date('february 1, 2023').getTime()
 
     interval = setInterval(() => {
       const now = new Date().getTime()
