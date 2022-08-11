@@ -1,5 +1,7 @@
 
 {
+  "success_registered":"Number successfully registered",
+  "error_registered":"Problem during saving. Please try again.",
   "home_translate" : "HOME",
   "fonctionning":"How does it work ?",
     "welcome_to_onlinepreps": "Prepare for your exams with ease on",

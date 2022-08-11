@@ -1,4 +1,6 @@
 {
+    "success_registered":"Numéro enregistré avec succès",
+    "error_registered":"Problème lors de la sauvegarde. Essayez à nouveau.",
     "home_translate" : "ACCUEIL",
     "fonctionning":"Comment ça marche ?",
     "welcome_to_onlinepreps": "Préparez vos examens en toute sérénité sur",

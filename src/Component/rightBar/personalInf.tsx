@@ -42,6 +42,7 @@ const StylePhoneNumber = styled(PhoneInput)({
 })
 function FormInf() {
   const [open, setOpen] = useState<boolean>(false)
+  const [openError, setOpenError] = useState<boolean>(false)
 
   const { handleSubmit, values, errors, touched, setFieldValue } = useFormik({
     initialValues: {
@@ -50,13 +51,39 @@ function FormInf() {
     onSubmit: (values, { resetForm }) => {
       Axios.post(`https://onlinepreps.herokuapp.com/api/insert`, {
         phoneNumber: values.phoneNumber,
-      }).then(() => setOpen(true))
+      })
+        .then(() => setOpen(true))
+        .catch((err) => {
+          console.log(err)
+          setOpenError(true)
+        })
       resetForm()
     },
     validationSchema: RegistrationForm,
   })
 
   const { t } = useTranslation()
+
+  const handleCloseSuccess = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === 'clickaway') {
+      return
+    }
+
+    setOpen(false)
+  }
+  const handleCloseError = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === 'clickaway') {
+      return
+    }
+
+    setOpenError(false)
+  }
   return (
     <Box
       sx={{ display: { xs: 'flex', sm: 'grid' }, gap: { xs: '30px', sm: 0 } }}
@@ -150,9 +177,22 @@ function FormInf() {
         </Typography>
         <ClockTimer />
       </Box>
-      <Snackbar open={open} autoHideDuration={6000}>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleCloseSuccess}
+      >
         <Alert severity="success" sx={{ width: '100%' }}>
-          This is a success message!
+          {t('success_registered')}
+        </Alert>
+      </Snackbar>
+      <Snackbar
+        open={openError}
+        autoHideDuration={6000}
+        onClose={handleCloseError}
+      >
+        <Alert severity="error" sx={{ width: '100%' }}>
+          {t('error_registered')}
         </Alert>
       </Snackbar>
     </Box>
